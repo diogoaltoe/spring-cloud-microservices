@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: microservice-discovery
+  cloud:
+    config:
+      uri: http://localhost:9001

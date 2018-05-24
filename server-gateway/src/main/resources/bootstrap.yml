@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: microservice-gateway
+  cloud:
+    config:
+      uri: http://localhost:9001
