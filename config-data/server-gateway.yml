@@ -27,8 +27,10 @@ zuul:
   routes:
     service-stock:
       path: /product/**
+      serviceId: stock
     service-relationship:
       path: /customer/**
+      serviceId: relationship
 
 #hystrix:
 #  shareSecurityContext: true
