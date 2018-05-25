@@ -22,12 +22,17 @@ security:
 #    enabled: true
 
 ---
-# Zuul-proxied services can be found by calling /service/product, /service/person, etc.
 #zuul:
 #  prefix: /service
 #  routes:
-#    microservice-stock:
-#      path: /product
+#    service-stock:
+#      serviceId: stock
+#      path: /api/product/**
+#      stripPrefix: false
+#    service-relationship:
+#      serviceId: relationship
+#      path: /api/customer/**
+#      stripPrefix: false
 
 #hystrix:
 #  shareSecurityContext: true
