@@ -1,0 +1,21 @@
+server:
+  port: 9030
+
+---
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: PostgreSQL
+    url: jdbc:postgresql://localhost:5432/spring_cloud_stock
+    username: postgres
+    password: '123456'
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true  

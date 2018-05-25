@@ -20,10 +20,15 @@
 	- **Password:** $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy (123456)
 	- **client-id:** microservices
 	- **client-secret:** $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy (123456)
+	- **client-id:client-secret (Base64):** bWljcm9zZXJ2aWNlczokMmEkMTAkcjBSRkRtcG5lQlZyeXguaWhISzlndTZGRkpRaTRuVHhRVXF6ZFNUdnJQcGFLWk14aWdxcHk=
 
-# Available Services
+# Stock Service
 
 - **Port:** 9030
+
+# Relationship Service
+
+- **Port:** 9031
 
 	
 # References

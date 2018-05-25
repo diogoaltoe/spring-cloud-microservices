@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.coderef</groupId>
-	<artifactId>delivery-order-service</artifactId>
+	<groupId>com.diogoaltoe</groupId>
+	<artifactId>service-stock</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>delivery-order-service</name>
-	<description>Delivery order service</description>
+	<name>service-stock</name>
+	<description>Stock Service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

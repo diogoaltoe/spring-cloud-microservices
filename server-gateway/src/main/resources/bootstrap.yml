@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-gateway
+    name: server-gateway
   cloud:
     config:
       uri: http://localhost:9000
