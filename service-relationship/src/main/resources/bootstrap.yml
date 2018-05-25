@@ -1,6 +1,6 @@
 spring:
   application:
-    name: service-stock
+    name: service-relationship
   cloud:
     config:
       uri: http://localhost:9000
@@ -12,4 +12,4 @@ security:
   oauth2:
     resource:
       userInfoUri: http://localhost:9020/user
-      id: stock
+      id: relationship

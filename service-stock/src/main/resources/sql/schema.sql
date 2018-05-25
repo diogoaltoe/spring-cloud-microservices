@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS product (
     cost double precision NOT NULL
 );
 
+ALTER TABLE product OWNER TO postgres;
+
 CREATE SEQUENCE IF NOT EXISTS seq_product
     START WITH 1
     INCREMENT BY 1

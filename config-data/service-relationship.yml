@@ -1,12 +1,12 @@
 server:
-  port: 9030
+  port: 9031
 
 ---
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     platform: PostgreSQL
-    url: jdbc:postgresql://localhost:5432/spring_cloud_stock
+    url: jdbc:postgresql://localhost:5432/spring_cloud_relationship
     username: postgres
     password: '123456'
   jpa:
