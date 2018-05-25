@@ -20,10 +20,23 @@ public class ProductController {
 	private ProductClient productClient;
 	
 	@RequestMapping(method = RequestMethod.GET)
+	//@HystrixCommand(fallbackMethod="getFallbackGetAll")
     public Resources<Object> getAll() {
 		
 		return productClient.getAll();
 	}
+	
+	/*public Resources<Object> getFallbackGetAll(Throwable e) {
+		
+		assert "getFallbackGetAll command failed".equals(e.getMessage());
+		
+		Object element[] = { "Fora do Ar" };
+		Iterable<Object> iterable = Arrays.asList(element);
+		Resources<Object> content = new Resources<Object>(iterable);
+		
+		return content;
+		
+	}*/
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String getById(@PathVariable("id") Integer id) {
@@ -44,10 +57,20 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.PATCH)
+	//@HystrixCommand(fallbackMethod="getFallbackPatch")
     public Resources<Object> patch(@PathVariable("id") Integer id, @RequestBody String params) {
 		
         return productClient.patch(id, params);
 	}
+	
+	/*public Resources<Object> getFallbackPatch() {
+
+		Object element[] = { "Fora do Ar" };
+		Iterable<Object> iterable = Arrays.asList(element);
+		Resources<Object> content = new Resources<Object>(iterable);
+		
+		return content;
+	}*/
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public Resources<Object> delete(@PathVariable("id") Integer id) {

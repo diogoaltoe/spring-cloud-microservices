@@ -1,0 +1,9 @@
+target
+.classpath
+/server-config/.project
+/server-discovery/.project
+/server-config/.springBeans
+.settings
+/server-discovery/.springBeans
+/server-gateway/.project
+/server-gateway/.springBeans

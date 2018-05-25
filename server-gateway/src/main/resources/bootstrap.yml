@@ -3,4 +3,13 @@ spring:
     name: microservice-gateway
   cloud:
     config:
-      uri: http://localhost:9001
+      uri: http://localhost:9000
+      username: config
+      password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+
+---
+security:
+  user:
+    name: gateway
+    password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+    role: SYSTEM

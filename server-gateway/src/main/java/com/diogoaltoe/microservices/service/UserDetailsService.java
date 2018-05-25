@@ -2,7 +2,6 @@ package com.diogoaltoe.microservices.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Optional;
 
 import javax.transaction.Transactional;
 
