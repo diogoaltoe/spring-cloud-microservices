@@ -21,8 +21,7 @@ import com.diogoaltoe.microservices.domain.Authorities;
 
 @Configuration
 @EnableAuthorizationServer
-public class AuthorizationServerConfiguration extends
-        AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
     private static PasswordEncoder encoder;
 
@@ -53,17 +52,18 @@ public class AuthorizationServerConfiguration extends
 
     @Bean
     public JdbcTokenStore tokenStore() {
+    	
         return new JdbcTokenStore(dataSource);
     }
 
     @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints)
-            throws Exception {
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.authenticationManager(this.authenticationManager).tokenStore(tokenStore());
     }
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+    	
         clients.jdbc(dataSource)
                 .withClient(clientId)
                 .authorizedGrantTypes(authorizedGrantTypes)
@@ -76,9 +76,11 @@ public class AuthorizationServerConfiguration extends
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+    	
         if (encoder == null) {
             encoder = new BCryptPasswordEncoder();
         }
+        
         return encoder;
     }
 }

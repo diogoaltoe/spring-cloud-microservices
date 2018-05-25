@@ -4,3 +4,13 @@ spring:
   cloud:
     config:
       uri: http://localhost:9001
+  security:
+    user:
+      name: root
+      password: password   
+      
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9020/user
+      id: product

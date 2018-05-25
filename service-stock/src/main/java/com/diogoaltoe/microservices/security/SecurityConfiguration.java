@@ -16,6 +16,7 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+    	
         http.requestMatchers()
                 .antMatchers("/**")
                 .and()
@@ -31,7 +32,8 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
     }
 
     @Override
-    public void configure(ResourceServerSecurityConfigurer resources){
+    public void configure(ResourceServerSecurityConfigurer resources) {
+    	
         resources.resourceId(resourceId);
     }
 }

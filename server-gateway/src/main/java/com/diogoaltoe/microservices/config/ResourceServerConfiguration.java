@@ -8,11 +8,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
-
 @Configuration
 @EnableResourceServer
-public class ResourceServerConfiguration extends
-        ResourceServerConfigurerAdapter {
+public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 	
 	@Value("${security.oauth2.client.resource-ids}")
     private String RESOURCE_ID;
