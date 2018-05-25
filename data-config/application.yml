@@ -1,0 +1,51 @@
+eureka:
+  instance:
+    hostname: localhost
+    port: 9010
+    user: discovery
+    password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.user}:${eureka.instance.password}@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
+    
+# primary, secondary, and tertiary illustrate running 3 intercommunicating instances.  
+# This example has them running side-by-side on localhost
+# Run by opening 3 separate command prompts:
+# -Dspring.profiles.active=primary
+# -Dspring.profiles.active=secondary
+# -Dspring.profiles.active=tertiary
+
+---
+spring:
+  profiles: primary
+server:
+  port: 9011  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9012/eureka/,http://localhost:9013/eureka/
+
+---
+spring:
+  profiles: secondary
+server:
+  port: 9012  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9013/eureka/,http://localhost:9011/eureka/
+
+---
+spring:
+  profiles: tertiary
+server:
+  port: 9013  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9011/eureka/,http://localhost:9012/eureka/

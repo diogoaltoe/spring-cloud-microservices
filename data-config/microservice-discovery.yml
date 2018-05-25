@@ -1,0 +1,24 @@
+server:
+  port: 9010
+
+---
+eureka:
+  instance:
+    hostname: localhost
+    user: discovery
+    password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy    
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.user}:${eureka.instance.password}@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000   
+
+---
+security:
+  user:
+    name: discovery
+    password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+    role: SYSTEM

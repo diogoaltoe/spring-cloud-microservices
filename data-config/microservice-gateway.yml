@@ -1,0 +1,60 @@
+server:
+  port: 9020
+
+---
+security:
+  oauth2:
+    client:
+      access-token-validity-seconds: 1800
+      authorized-grant-types: password,refresh_token
+      client-id: microservices
+      client-secret: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+      resource-ids: resources
+      scope: read,write     
+#  user:
+#    name: gateway
+#    password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+#    role: SYSTEM
+
+---
+#feign:
+#  hystrix:
+#    enabled: true
+
+---
+# Zuul-proxied services can be found by calling /service/product, /service/person, etc.
+#zuul:
+#  prefix: /service
+#  routes:
+#    microservice-stock:
+#      path: /product
+
+#hystrix:
+#  shareSecurityContext: true
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
+
+---
+spring:
+  datasource:
+    data: classpath:/sql/data.sql
+    schema: classpath:/sql/schema.sql
+    driver-class-name: org.postgresql.Driver
+    platform: PostgreSQL
+    url: jdbc:postgresql://localhost:5432/spring_cloud_oauth
+    username: postgres
+    password: '123456'
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false        
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true
