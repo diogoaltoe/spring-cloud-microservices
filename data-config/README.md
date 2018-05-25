@@ -1,5 +1,8 @@
-# Spring Cloud Config
+# Data Config Files
 
-Microservices Config File
+Here are the microservices's data config files from the project.
 
-This repository is part of my study about Microservices with Spring Cloud (Netflix).
+- application.yml: Default config.
+- microservice-discovery.yml: Service Discovery Server config.
+- microservice-gateway.yml: API Gateway Server config.
+- microservice-stock.yml: Stock Service config.

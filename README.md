@@ -22,18 +22,12 @@
 	- Port: 9030
 
 	
-# REFERÊNCIAS
+# References
 
-https://www.udemy.com/microservices-with-spring-cloud/
-
-https://medium.com/coderef/arquitetura-de-microservices-com-spring-cloud-e-spring-boot-parte-1-b5c9288df66d
-
-https://dzone.com/articles/accessing-a-spring-data-rest-api-with-feign
-
-https://gist.github.com/condran/36819504b5811c01f3bc2f179a85b065
-
-http://www.baeldung.com/spring-cloud-securing-services
-
-https://developer.okta.com/blog/2018/02/13/secure-spring-microservices-with-oauth
-
-https://github.com/eugenp/tutorials/tree/master/spring-cloud
+- https://www.udemy.com/microservices-with-spring-cloud/
+- https://medium.com/coderef/arquitetura-de-microservices-com-spring-cloud-e-spring-boot-parte-1-b5c9288df66d
+- https://dzone.com/articles/accessing-a-spring-data-rest-api-with-feign
+- https://gist.github.com/condran/36819504b5811c01f3bc2f179a85b065
+- http://www.baeldung.com/spring-cloud-securing-services
+- https://developer.okta.com/blog/2018/02/13/secure-spring-microservices-with-oauth
+- https://github.com/eugenp/tutorials/tree/master/spring-cloud
