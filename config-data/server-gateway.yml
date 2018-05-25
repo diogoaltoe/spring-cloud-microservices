@@ -26,11 +26,13 @@ zuul:
 #  prefix: /service
   routes:
     service-stock:
-#      path: /product/**
       serviceId: stock
+      path: /api/product/**
+      stripPrefix: false
     service-relationship:
-#      path: /customer/**
       serviceId: relationship
+      path: /api/customer/**
+      stripPrefix: false
 
 #hystrix:
 #  shareSecurityContext: true
