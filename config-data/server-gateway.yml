@@ -26,9 +26,9 @@ zuul:
 #  prefix: /service
   routes:
     service-stock:
-      path: /product
+      path: /product/**
     service-relationship:
-      path: /customer
+      path: /customer/**
 
 #hystrix:
 #  shareSecurityContext: true
