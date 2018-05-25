@@ -18,24 +18,28 @@ import com.diogoaltoe.microservices.repository.UserRepository;
 
 @Service
 @Transactional
-public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService{
+public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
 	
 	UserRepository userRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		
 		return userRepository.findByUsername(username)
-								.map(user -> new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user)))
-								.orElseThrow(() -> new UsernameNotFoundException("User "+username+" Not found"));
+				.map(user -> new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getGrantedAuthorities(user)))
+				.orElseThrow(() -> new UsernameNotFoundException("User "+username+" Not found"));
 	}
 
 	@Autowired
 	public void setUserRepository(UserRepository userRepository) {
+		
 		this.userRepository = userRepository;
 	}
 	
-	private Collection<GrantedAuthority> getGrantedAuthorities(User user){
+	private Collection<GrantedAuthority> getGrantedAuthorities(User user) {
+		
     	Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();
+    	
         for (Authority authority : user.getAuthorities()) {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(authority.getName());
             grantedAuthorities.add(grantedAuthority);

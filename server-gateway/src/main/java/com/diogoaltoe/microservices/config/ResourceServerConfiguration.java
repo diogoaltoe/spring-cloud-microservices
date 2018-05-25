@@ -17,11 +17,13 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) {
+    	
         resources.resourceId(RESOURCE_ID);
     }
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+    	
         http.requestMatchers()
                 .antMatchers("/**")
                 .and()

@@ -7,25 +7,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient("MICROSERVICE-STOCK")
+@FeignClient("SERVICE-STOCK")
 public interface ProductClient {
 
 	@RequestMapping(value = "/product", method = {RequestMethod.GET})
-	public Resources<Object> getAll();
+	public String getAll();
 	
 	@RequestMapping(value = "/product/{id}", method = {RequestMethod.GET})
 	public String getById(@PathVariable("id") Integer id);
 
 	@RequestMapping(value = "/product", method = {RequestMethod.POST})
-	public Resources<Object> post(@RequestBody Product product);
+	public String post(@RequestBody Product product);
 	
 	@RequestMapping(value = "/product/{id}", method = {RequestMethod.PUT})
-	public Resources<Object> put(@PathVariable("id") Integer id, @RequestBody Product product);
+	public String put(@PathVariable("id") Integer id, @RequestBody Product product);
 	
 	@RequestMapping(value = "/product/{id}", method = {RequestMethod.PATCH})
-	public Resources<Object> patch(@PathVariable("id") Integer id, @PathVariable("params") String params);
+	public String patch(@PathVariable("id") Integer id, @PathVariable("params") String params);
 	
 	@RequestMapping(value = "/product/{id}", method = {RequestMethod.DELETE})
-	public Resources<Object> delete(@PathVariable("id") Integer id);
+	public String delete(@PathVariable("id") Integer id);
 	
 }
