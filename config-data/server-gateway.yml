@@ -26,10 +26,10 @@ zuul:
 #  prefix: /service
   routes:
     service-stock:
-      path: /product/**
+#      path: /product/**
       serviceId: stock
     service-relationship:
-      path: /customer/**
+#      path: /customer/**
       serviceId: relationship
 
 #hystrix:
