@@ -22,17 +22,17 @@ security:
 #    enabled: true
 
 ---
-zuul:
+#zuul:
 #  prefix: /service
-  routes:
-    service-stock:
-      serviceId: stock
-      path: /api/product/**
-      stripPrefix: false
-    service-relationship:
-      serviceId: relationship
-      path: /api/customer/**
-      stripPrefix: false
+#  routes:
+#    service-stock:
+#      serviceId: stock
+#      path: /api/product/**
+#      stripPrefix: false
+#    service-relationship:
+#      serviceId: relationship
+#      path: /api/customer/**
+#      stripPrefix: false
 
 #hystrix:
 #  shareSecurityContext: true
