@@ -3,6 +3,8 @@ server:
 
 ---
 my:
+  gateway:
+    host: localhost:9020
   stock:
     host: localhost:9030
   relationship:
