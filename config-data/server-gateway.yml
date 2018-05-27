@@ -2,6 +2,11 @@ server:
   port: 9020
 
 ---
+my:
+  stock:
+    host: localhost:9030
+
+---
 security:
   oauth2:
     client:
