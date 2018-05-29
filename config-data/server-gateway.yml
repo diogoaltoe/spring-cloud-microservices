@@ -2,6 +2,15 @@ server:
   port: 9020
 
 ---
+my:
+  gateway:
+    host: localhost:9020
+  stock:
+    host: localhost:9030
+  relationship:
+    host: localhost:9031
+
+---
 security:
   oauth2:
     client:
