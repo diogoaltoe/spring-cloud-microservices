@@ -6,7 +6,7 @@
 	<groupId>com.diogoaltoe</groupId>
 	<artifactId>service-relationship</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>service-relationship</name>
 	<description>Relationship Service</description>

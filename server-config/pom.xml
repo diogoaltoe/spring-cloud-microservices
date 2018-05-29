@@ -6,7 +6,7 @@
 	<groupId>com.diogoaltoe</groupId>
 	<artifactId>server-config</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>server-config</name>
 	<description>Config Repository Server</description>
