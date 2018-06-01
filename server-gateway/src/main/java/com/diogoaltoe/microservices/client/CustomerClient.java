@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient("SERVICE-RELATIONSHIP")
+@FeignClient(name="SERVICE-RELATIONSHIP", url="${my.relationship.host}")
 public interface CustomerClient {
 
 	@RequestMapping(value = "/customer", method = {RequestMethod.GET})

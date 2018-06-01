@@ -9,6 +9,14 @@ spring:
         git:
           uri: https://github.com/diogoaltoe/spring-cloud-microservices
           searchPaths: config-data
+#spring:
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          searchLocations: /home/diogoaltoe/appservers/apache-tomcat-9.0.4/webapps/config-data/          
 
 ---
 security:

@@ -1,6 +1,7 @@
 eureka:
   instance:
     hostname: localhost
+#    hostname: diogoaltoe.com/server-discovery    
     port: 9010
     user: discovery
     password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
@@ -9,7 +10,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.user}:${eureka.instance.password}@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://${eureka.instance.user}:${eureka.instance.password}@${eureka.instance.hostname}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
     

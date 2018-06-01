@@ -1,3 +1,6 @@
 spring:
   application:
     name: server-config
+# To run more than one application in the same server    
+  jmx:
+    default-domain: server-config    

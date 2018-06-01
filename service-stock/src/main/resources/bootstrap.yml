@@ -4,12 +4,17 @@ spring:
   cloud:
     config:
       uri: http://localhost:9000
+#      uri: http://diogoaltoe.com/server-config      
       username: config
       password: $2a$10$r0RFDmpneBVryx.ihHK9gu6FFJQi4nTxQUqzdSTvrPpaKZMxigqpy
+# To run more than one application in the same server    
+  jmx:
+    default-domain: service-stock
       
 ---      
 security:
   oauth2:
     resource:
       userInfoUri: http://localhost:9020/user
+#      userInfoUri: http://diogoaltoe.com/server-gateway/user      
       id: stock
