@@ -8,11 +8,13 @@ CREATE DATABASE IF NOT EXISTS spring_cloud_oauth
 	
 CREATE TABLE IF NOT EXISTS "user" (
   username character varying(50) NOT NULL PRIMARY KEY,
-  email character varying(50),
-  password character varying(500),
+  name character varying(50) NOT NULL,
+  email character varying(50) NOT NULL,
+  password character varying(500) NOT NULL,
   activated boolean DEFAULT FALSE,
   activationkey character varying(50) DEFAULT NULL,
-  resetpasswordkey character varying(50) DEFAULT NULL
+  resetpasswordkey character varying(50) DEFAULT NULL,
+  CONSTRAINT user_unique UNIQUE (email)
 );
 
 CREATE TABLE IF NOT EXISTS authority (

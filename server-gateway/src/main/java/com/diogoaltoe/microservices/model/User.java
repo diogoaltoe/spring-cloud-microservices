@@ -27,6 +27,9 @@ public class User implements Serializable {
 
     @Size(min = 0, max = 500)
     private String password;
+    
+    @Size(min = 3, max = 50)
+    private String name;
 
     @Email
     @Size(min = 0, max = 50)
@@ -52,12 +55,13 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String username, String password, String email,
+    public User(String username, String password, String name, String email,
                 boolean activated, String firstName, String lastName,
                 String activationKey, String resetPasswordKey,
                 Set<Authority> authorities) {
         this.username = username;
         this.password = password;
+        this.name = name;
         this.email = email;
         this.activated = activated;
         this.activationKey = activationKey;
@@ -80,8 +84,16 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public String getName() {
+		return name;
+	}
 
-    public String getEmail() {
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
         return email;
     }
 

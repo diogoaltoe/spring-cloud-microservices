@@ -40,3 +40,15 @@
 - [Secure a Spring Microservices Architecture with Spring Security and OAuth 2.0](https://developer.okta.com/blog/2018/02/13/secure-spring-microservices-with-oauth)
 - [Spring Cloud – Bootstrapping](http://www.baeldung.com/spring-cloud-bootstrapping)
 - [Spring Cloud Netflix with PATCH](https://gist.github.com/condran/36819504b5811c01f3bc2f179a85b065)
+
+## Versioning
+
+We use [Git](https://git-scm.com/) for versioning.
+
+## Author
+
+* **Diogo** - *Initial work* - [diogoaltoe](https://github.com/diogoaltoe)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
