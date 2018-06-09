@@ -8,33 +8,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-
-```
-I suggest use an Java IDE. I'm using Eclipse with Spring plugin.
-```
-```
-PostgreSQL or other database (need edit the config).
-```
-```
-An client to consume and test the service. I suggest Rest Web Service Client for Chrome or RESTClient for Firefox.
-```
+- I suggest use an Java IDE. I'm using Eclipse with Spring plugin.
+- PostgreSQL or other database (need edit the config).
+- An client to consume and test the service. I suggest Rest Web Service Client for Chrome or RESTClient for Firefox.
 
 ### Installing
 
-
-```
-Download the project by clicking the "Clone or download" button.
-```
-```
-Unzip the project into the directory of your choice.
-```
-```
-Using Eclipse (or another IDE), open the project you saved in the directory of your choice.
-```
-```
-Run the project.
-
-```
+1. Download the project by clicking the "Clone or download" button.
+2. Unzip the project into the directory of your choice.
+3. Using Eclipse (or another IDE), open the project you saved in the directory of your choice.
+4. Run the project.
 
 ## Deployment
 
@@ -45,23 +28,19 @@ You can use another project like Client [android-microservices](https://github.c
 You can download the WAR file on [Releases Page](https://github.com/diogoaltoe/android-microservices/releases), install on your host server and test the project.
 
 ## Build and Run
-```
-Run as > Maven clean
-```
-```
-Run as > Maven build
-```
-```
-Run as > Spring Boot App
-```
+
+1. Run as > Maven clean
+2. Run as > Maven build
+3. Run as > Spring Boot App
 
 ## Usage
 
 ### Checking app is deployed sucessfullly
 ```
 curl -i http://localhost:9020/
-
+```
 Server Response:
+```
 {
   "_links" : {
     "user" : {
@@ -90,8 +69,9 @@ Server Response:
 ### Access secure resource with token
 ```
 curl -i http://localhost:9020/product/
-
+```
 Server Response:
+```
 {
 	"timestamp":1444985908768,
 	"status":401,
@@ -104,8 +84,9 @@ Server Response:
 ### Fetching refresh_token
 ```
 curl -vu wsapp:secret 'http://localhost:9020/oauth/token?username=admin@admin.com&password=12345678&grant_type=password'
-
+```
 Server Response:
+```
 {
 	"access_token":"92457844-4d4f-4f5a-b053-7f5074d6y892",
 	"token_type":"bearer",
@@ -118,8 +99,9 @@ Server Response:
 ### Fetching acess_token by submitting refresh_token
 ```
 curl -vu wsapp:secret 'http://localhost:9020/oauth/token?grant_type=refresh_token&refresh_token=<refresh_token>'
-
+```
 Server Response:
+```
 {
 	"access_token":"821c99d4-2c9f-4990-b68d-18eacaff54b2",
 	"token_type":"bearer",
@@ -132,8 +114,9 @@ Server Response:
 ### Access secure resource sucessfully
 ```
 curl -i -H "Authorization: Bearer <access_token>" http://localhost:9020/product/
-
+```
 Server Response:
+```
 {
   "_links" : {
     "self" : {
@@ -246,13 +229,13 @@ Server Response:
 
 ## Built With
 
-* [Maven](https://gradle.org/) - Dependency Management.
-* [OAuth2](https://oauth.net/2/) - Industry-standard protocol for authorization.
-* [PostgreSQL](https://www.postgresql.org/) - is a powerful, open source object-relational database system.
-* [Spring Boot](https://projects.spring.io/spring-boot/) - Makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
-* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) - It eases development of applications that need to access JPA data sources.
-* [Spring HATEOAS ](https://projects.spring.io/spring-hateoas/) - Provides some APIs to ease creating REST representations that follow the HATEOAS principle when working with Spring and especially Spring MVC.
-* [Spring Security](https://projects.spring.io/spring-security/) - Is a framework that focuses on providing both authentication and authorization to Java applications.
+- [Maven](https://gradle.org/) - Dependency Management.
+- [OAuth2](https://oauth.net/2/) - Industry-standard protocol for authorization.
+- [PostgreSQL](https://www.postgresql.org/) - is a powerful, open source object-relational database system.
+- [Spring Boot](https://projects.spring.io/spring-boot/) - Makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+- [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) - It eases development of applications that need to access JPA data sources.
+- [Spring HATEOAS ](https://projects.spring.io/spring-hateoas/) - Provides some APIs to ease creating REST representations that follow the HATEOAS principle when working with Spring and especially Spring MVC.
+- [Spring Security](https://projects.spring.io/spring-security/) - Is a framework that focuses on providing both authentication and authorization to Java applications.
 	
 	
 ## References
@@ -271,7 +254,7 @@ We use [Git](https://git-scm.com/) for versioning.
 
 ## Author
 
-* **Diogo** - *Initial work* - [diogoaltoe](https://github.com/diogoaltoe)
+**Diogo** - *Initial work* - [diogoaltoe](https://github.com/diogoaltoe)
 
 ## License
 
