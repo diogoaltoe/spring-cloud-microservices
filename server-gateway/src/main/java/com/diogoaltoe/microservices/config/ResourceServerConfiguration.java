@@ -28,6 +28,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .antMatchers("/**")
                 .and()
                 .authorizeRequests()
+                .antMatchers(HttpMethod.POST, "/user").permitAll()
                 .anyRequest()
                 .authenticated()
                 .antMatchers(HttpMethod.GET, "/**").access("#oauth2.hasScope('read')")
