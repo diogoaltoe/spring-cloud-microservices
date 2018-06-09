@@ -36,6 +36,8 @@ You can download the WAR file on [Releases Page](https://github.com/diogoaltoe/a
 ## Usage
 
 ### Checking app is deployed sucessfullly
+
+Command:
 ```
 curl -i http://localhost:9020/
 ```
@@ -67,6 +69,8 @@ Server Response:
 ```
 
 ### Access secure resource with token
+
+Command:
 ```
 curl -i http://localhost:9020/product/
 ```
@@ -82,6 +86,8 @@ Server Response:
 ```
 
 ### Fetching refresh_token
+
+Command:
 ```
 curl -vu wsapp:secret 'http://localhost:9020/oauth/token?username=admin@admin.com&password=12345678&grant_type=password'
 ```
@@ -97,6 +103,8 @@ Server Response:
 ```
 
 ### Fetching acess_token by submitting refresh_token
+
+Command:
 ```
 curl -vu wsapp:secret 'http://localhost:9020/oauth/token?grant_type=refresh_token&refresh_token=<refresh_token>'
 ```
@@ -112,6 +120,8 @@ Server Response:
 ```
 
 ### Access secure resource sucessfully
+
+Command:
 ```
 curl -i -H "Authorization: Bearer <access_token>" http://localhost:9020/product/
 ```
