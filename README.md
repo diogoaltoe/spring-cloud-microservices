@@ -248,7 +248,13 @@ Server Response:
 * [Spring Boot](https://projects.spring.io/spring-boot/) - Makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
 * [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) - It eases development of applications that need to access JPA data sources.
 * [Spring HATEOAS ](https://projects.spring.io/spring-hateoas/) - Provides some APIs to ease creating REST representations that follow the HATEOAS principle when working with Spring and especially Spring MVC.
-* [Spring Security](https://projects.spring.io/spring-security/) - Is a framework that focuses on providing both authentication and authorization to Java applications.		
+* [Spring Security](https://projects.spring.io/spring-security/) - Is a framework that focuses on providing both authentication and authorization to Java applications.	
+* [Spring Boot](https://projects.spring.io/spring-boot/) - Makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) - It eases development of applications that need to access JPA data sources.
+* [OAuth2](https://oauth.net/2/) - Industry-standard protocol for authorization.
+* [PostgreSQL](https://www.postgresql.org/) - is a powerful, open source object-relational database system.
+* [Maven](https://gradle.org/) - Dependency Management.
+	
 ## References
 
 - [Microservices with Spring Cloud - Udemy Course](https://www.udemy.com/microservices-with-spring-cloud/)
