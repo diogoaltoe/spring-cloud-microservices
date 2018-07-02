@@ -249,11 +249,16 @@ Server Response:
 * [Maven](https://gradle.org/) - Dependency Management.
 * [OAuth2](https://oauth.net/2/) - Industry-standard protocol for authorization.
 * [PostgreSQL](https://www.postgresql.org/) - is a powerful, open source object-relational database system.
+* [Spring Cloud](http://projects.spring.io/spring-cloud/) - Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems. 
+* [Spring Cloud Netflix](https://cloud.spring.io/spring-cloud-netflix/) - With a few simple annotations you can quickly enable and configure the common patterns inside your application and build large distributed systems with battle-tested Netflix components. 
+* [Netflix Zuul](https://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#_router_and_filter_zuul) - Zuul is a JVM-based router and server-side load balancer from Netflix.
+* [Netflix Feign](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html) - Is a declarative and easier way to write a web service client.
+* [Netflix Ribbon](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html) - Is a client-side load balancer that gives you a lot of control over the behavior of HTTP and TCP clients.
+* [Spring Data REST](https://projects.spring.io/spring-data-rest/) - Makes it easy to build hypermedia-driven REST web services on top of Spring Data repositories.
 * [Spring Boot](https://projects.spring.io/spring-boot/) - Makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
 * [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/) - It eases development of applications that need to access JPA data sources.
 * [Spring HATEOAS ](https://projects.spring.io/spring-hateoas/) - Provides some APIs to ease creating REST representations that follow the HATEOAS principle when working with Spring and especially Spring MVC.
-* [Spring Security](https://projects.spring.io/spring-security/) - Is a framework that focuses on providing both authentication and authorization to Java applications.
-	
+* [Spring Security](https://projects.spring.io/spring-security/) - Is a framework that focuses on providing both authentication and authorization to Java applications.	
 	
 ## References
 
